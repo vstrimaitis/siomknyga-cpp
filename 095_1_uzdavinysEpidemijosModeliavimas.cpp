@@ -3,6 +3,9 @@ bool mazejimo (int a, int b) { // funkcija rikiavimui mažėjimo tvarka
 
 }
 
+const int MAXN = ...;  // maksimalus grafo viršūnių skaičius
+                       // jį galima sužinoti iš sąlygoje pateiktų ribojimų
+
 int n;                 // viršūnių skaičius
 vector<int> adj[MAXN]; // kaimynystės sąrašas
 bool aplankyta[MAXN];

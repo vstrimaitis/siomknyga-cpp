@@ -1,12 +1,12 @@
-const int MAXN = 100000, // maksimalus kambarių (grafo viršūnių) skaičius
-          MAXK = 100000; // maksimalus nykštukų skaičius
-                         // tiek MAXN, tiek MAXK galima sužinoti iš pateiktų sąlygoje ribojimų
+const int MAXN = ...,  // maksimalus kambarių (grafo viršūnių) skaičius
+          MAXK = ...;  // maksimalus nykštukų skaičius
+                       // tiek MAXN, tiek MAXK galima sužinoti iš pateiktų sąlygoje ribojimų
 
 int n;                 // viršūnių (kambarių) skaičius
 vector<int> adj[MAXN]; // kaimynystęs sąrašas, kur adj[i] yra i-tosios viršūnės kaimynų sąrašas
 
-int nykSk;       // nykštukų skaičius
-int kamb[MAXN];  // kamb[i] - i-tojo nykštuko kambario numeris
+int nykSk;             // nykštukų skaičius
+int kamb[MAXN];        // kamb[i] - i-tojo nykštuko kambario numeris
 int isejimas, t;
 bool spes[MAXN];
 
