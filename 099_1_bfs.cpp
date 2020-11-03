@@ -1,6 +1,3 @@
-int n;                 // viršūnių skaičius
-vector<int> adj[MAXN]; // kaimynystęs sąrašas, kur adj[i] yra i-tosios viršūnės kaimynų sąrašas
-
 int atstumas[MAXN];    // saugomi atstumai nuo pradinės iki visų kitų viršūnių
 int pirmine[MAXN];
 int spalva[MAXN];      // 0, jei balta,

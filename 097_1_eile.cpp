@@ -22,7 +22,7 @@ struct eile {
 
 };
 
-// Vertėjo pastaba: C++ kalboje jau yra suimplementuota eilė:
+//  Pastaba: C++ kalboje jau yra suimplementuota eilė:
 //   #include <queue>
 //   queue<int> q;
 //  Tokia eilė palaiko visas reikiamas operacijas:

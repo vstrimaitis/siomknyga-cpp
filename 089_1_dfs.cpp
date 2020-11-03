@@ -1,10 +1,8 @@
 int spalva[MAXN];      // spalva[i] yra 0, jei i-tosios viršūnės spalva yra balta,
                        //               1 - jei pilka,
                        //               2 - jei juoda
-
                        // pradinės reikšmės - 0
 int pirmine[MAXN];     // prieš kviečiant DFS reiktų nustatyti pradines reikšmes į -1
-vector<int> adj[MAXN]; // kaimynystės sąrašas, kur adj[i] yra i-tosios viršūnės kaimynų sąrašas
 
 void dfs (int v) {
     spalva[v] = 1;            // nuspalvinam viršūnę v pilkai

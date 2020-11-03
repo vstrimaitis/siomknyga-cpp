@@ -1,5 +1,3 @@
-int n;                 // viršūnių skaičius
-vector<int> adj[MAXN]; // kaimynystės sąrašas, kur adj[i] yra i-tosios viršūnės kaimynų sąrašas
 bool aplankyta[MAXN];
 int sk = 0;            // kiek viršūnių aplankėm
 
