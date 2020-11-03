@@ -36,10 +36,14 @@ int uzsikres (int m) { // m - jau užsikrėtusių paukščių skaičius (duodama
     sort (kompDydis.begin(), kompDydis.end(), mazejimo);    // surikiuojam dydžius mažėjimo tvarka
 
     int ats = 0;
-    m = min (m, (int)kompDydis.size()); // Jei m yra daugiau nei yra komponentų,
-                                        //  tai visi komponentai ir bus užkrėsti,
-                                        //  o tai yra tas pats, jei m būtų lygu komponentų skaičiui.
-    for (int i = 0; i < m; i++)
+    int iki;
+
+    if (m > (int)kompDydis.size()) // užsikrėtusių paukščių gali būti daugiau nei jungumo komponentų
+        iki = (int)kompDydis;
+    else
+        iki = m;
+
+    for (int i = 0; i < iki; i++)
         ats += kompDydis[i];
 
     return ats;
