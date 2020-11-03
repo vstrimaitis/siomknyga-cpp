@@ -1,5 +1,6 @@
 bool mazejimo (int a, int b) { // funkcija rikiavimui mažėjimo tvarka
-    a > b;
+    return a > b;
+
 }
 
 int n;                 // viršūnių skaičius
