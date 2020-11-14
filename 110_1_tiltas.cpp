@@ -1,7 +1,7 @@
 bool tiltas (int v, int u) {
     if (briaunuSk[v][u] > 1)
-        return true;
-    else {
+        return false;
+    
         for (int k = 0; k < n; k++)
             spalva[k] = 0;
 
@@ -12,5 +12,4 @@ bool tiltas (int v, int u) {
         briaunuSk[u][v]++;
 
         return spalva[v] == 0;
-    }
 }
