@@ -12,7 +12,7 @@ void flerio () {
 
     int nelyg = 0;
     // suskaičiuojama, kiek yra nelyginio laipsnio viršūnių, ir pradinė viršūnė (v)
-    int v = 1;
+    int v = 0;
     for (int k = 0; k < n; k++) {
         if (laipsnis[k] % 2 == 1) {
             nelyg++;
