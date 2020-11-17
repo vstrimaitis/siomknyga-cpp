@@ -1,7 +1,7 @@
 const int MAXZODZIU = ...;
 
 int sk;                             // žodžių skaičius
-string z[MAXZODZIU];                // žodžių masyvas
+string z[MAXZODZIU + 1];                // žodžių masyvas
 int n;                              // viršūnių skaičius
 map<char, bool> virsune;            // ar grafe yra raidę atitinkanti viršūnė
 map<pair<char, char>, bool> lankas;
