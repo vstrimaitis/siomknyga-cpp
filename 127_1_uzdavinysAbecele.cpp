@@ -1,4 +1,9 @@
-#include <limits.h> // šios bibliotekos prireiks, kadangi naudosime konstantą CHAR_MIN (mažiausią char kintamojo pasiekiamą reikšmę)
+#include <limits.h> 
+/*
+    šios bibliotekos prireiks, kadangi naudosime konstantas
+    CHAR_MIN (mažiausia char tipo kintamojo pasiekiama reikšmė) ir
+    CHAR_MAX (didŽiausia char tipo kintamojo pasiekiama reikšmė)
+*/
 
 const int MAXZODZIU = ...;
 
