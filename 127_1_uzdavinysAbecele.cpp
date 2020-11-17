@@ -1,7 +1,9 @@
+#include <limits.h> // šios bibliotekos prireiks, kadangi naudosime konstantą CHAR_MIN (mažiausią char kintamojo pasiekiamą reikšmę)
+
 const int MAXZODZIU = ...;
 
 int sk;                             // žodžių skaičius
-string z[MAXZODZIU + 1];                // žodžių masyvas
+string z[MAXZODZIU + 1];            // žodžių masyvas
 int n;                              // viršūnių skaičius
 map<char, bool> virsune;            // ar grafe yra raidę atitinkanti viršūnė
 map<pair<char, char>, bool> lankas;
@@ -23,19 +25,19 @@ void sudarykGrafa () {
                 n++;
                 virsune[z[i][j]] = true;
             }
+        }
 
-            int m = min((int)z[i].size(), (int)z[i+1].size());
-            int j = 0;
-            while (j < m && z[i][j] == z[i+1][j]) {
-                j++;
-                // ieškoma nesutampanti raidė
-            }
+        int m = min((int)z[i].size(), (int)z[i+1].size());
+        int j = 0;
+        while (j < m && z[i][j] == z[i+1][j]) {
+            j++;
+            // ieškoma nesutampanti raidė
+        }
 
-            if (j < m && !(lankas[{z[i][j], z[i+1][j]}])) {
-                // rasta nesutampanti raidė - grafas papildomas lanku
-                lankas[{z[i][j], z[i+1][j]}] = true;
-                ieinLanku[z[i+1][j]]++;
-            }
+        if (j < m && !(lankas[{z[i][j], z[i+1][j]}])) {
+            // rasta nesutampanti raidė - grafas papildomas lanku
+            lankas[{z[i][j], z[i+1][j]}] = true;
+            ieinLanku[z[i+1][j]]++;
         }
     }
 }
