@@ -1,5 +1,4 @@
-const int MAXN = ...;          // maksimalus viršūnių skaičius
-      int MAXB = MAXN * MAXN;  // maksimalus lankų skaičius
+const int MAXN = ...;  // maksimalus viršūnių skaičius
 
 int n;                 // viršūnių skaičius
 vector<int> adj[MAXN]; // adj[i] yra i-tosios viršūnės kaimynų sąrašas
