@@ -24,7 +24,7 @@ void dijkstra (int p) {
             }
         }
 
-        // randama tolesnė koordinatė - dar neprijungta viršūnė su mažiausiu atstumu
+        // randama tolesnė viršūnė - dar neprijungta viršūnė su mažiausiu atstumu
         v = -1;
         int minAtstumas = BEGALINIS;
         for (int u = 0; u < n; u++) {
