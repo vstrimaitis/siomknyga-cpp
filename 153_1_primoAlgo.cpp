@@ -1,3 +1,12 @@
+/*
+    Pastaba: pirmiau pateikiamas Primo algoritmo kodas, analogiškas knygos kodui,
+    o žemiau - efektyvus, naudojantis duomenų struktūrą priority_queue (kaip ir efektyvioje
+    Dijkstros algoritmo implementacijoje).
+    Taip pat verta paminėti, kad olimpiadose patogiausia naudoti Kruskalio algoritmą MJM rasti,
+    kurio implementacijoje naudojama duomenų struktūra "nesikertančių aibių sąjunga" (trumpinama, DSU).
+    Apie Kruskalio algoritmą galite pasiskaityti čia: https://cp-algorithms.com/graph/mst_kruskal_with_dsu.html
+*/
+
 const int BEGALINIS = ...; // kažkoks pakankamai didelis skaičius, pavyzdžiui 1e9
 const int MAXN = ...;      // maksimalus viršūnių skaičius
 
@@ -44,5 +53,46 @@ void primo () {
         }
 
         // jei jokia viršūnė nerasta, tai v = 0 ir ciklas nutraukiamas
+    }
+}
+
+
+
+// Primo algoritmo implementacija, naudojanti priority_queue
+
+vector<pair<int, int>> adj[MAXN];
+/*
+    adj[i] yra i-tosios viršūnės kaimynų sąrašas, kur
+     adj[i][j].first yra j-tosios kaimynės numeris
+     adj[i][j].second yra briaunos, jungiančios i-tąją viršūnę su jos j-tąja kaimyne, svoris
+*/
+
+void primo () {
+    // įrašomos pradinės masyvų reikšmės
+    for (int u = 0; u < n; u++) {
+        kaina[u] = BEGALINIS;
+        pirmine[u] = -1;
+        prijungta[u] = false;
+    }
+
+    kaina[0] = 0;
+    priority_queue<pair<int, int>, vector<pair<int,int>>, greater<pair<int,int>>> q; // priority_queue, kurios top() elementas visad yra mažiausias
+    q.push({kaina[p], p}); // į q visados dedam poras {kaina[i], i}, nes tada q.top() elementas visad būs mažiausios kainos
+
+    while (!q.empty()) {
+        int v = q.top().second;
+        if (!prijungta[v]) {
+            prijungta[v] = true;
+            for (auto p : adj[v]) { // einame per viršūnės v kaimynus
+                int u = p.first;  // kaimynės numeris
+                int w = p.second; // briaunos tarp v ir u svoris
+                if (kaina[u] > w) {
+                    // verčiau į u eiti per v
+                    kaina[u] = w;
+                    pirmine[u] = v;
+                    q.push ({kaina[u], u});
+                }
+            }
+        }
     }
 }
