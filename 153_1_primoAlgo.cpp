@@ -52,7 +52,8 @@ void primo () {
             }
         }
 
-        // jei jokia viršūnė nerasta, tai v = 0 ir ciklas nutraukiamas
+        // jei jokia viršūnė nerasta, tai v = -1 ir ciklas nutraukiamas
+
     }
 }
 
