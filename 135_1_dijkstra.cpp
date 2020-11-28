@@ -1,6 +1,6 @@
 /*
     Pastaba: pirmiau pateikiamas c++ kodas, analogiškas knygos kodui.
-    Žemiau jo galite rasti efektyvią Dijkstros algoritmo implementaciją,
+    Žemiau jo galite rasti efektyvią Dijkstros algoritmo realizaciją,
     kuri naudoja duomenų struktūrą priority_queue
 */
 
@@ -44,7 +44,7 @@ void dijkstra (int p) {
 
 
 
-// Dijkstros algoritmo implementacija su priority_queue
+// Dijkstros algoritmo realizacija su priority_queue
 
 vector<pair<int, int>> adj[MAXN];
 /*

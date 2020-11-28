@@ -1,9 +1,9 @@
 /*
     Pastaba: pirmiau pateikiamas Primo algoritmo kodas, analogiškas knygos kodui,
     o žemiau - efektyvus, naudojantis duomenų struktūrą priority_queue (kaip ir efektyvioje
-    Dijkstros algoritmo implementacijoje).
+    Dijkstros algoritmo realizacijoje).
     Taip pat verta paminėti, kad olimpiadose patogiausia naudoti Kruskalio algoritmą MJM rasti,
-    kurio implementacijoje naudojama duomenų struktūra "nesikertančių aibių sąjunga" (trumpinama, DSU).
+    kurio realizacijoje naudojama duomenų struktūra "nesikertančių aibių sąjunga" (trumpinama, DSU).
     Apie Kruskalio algoritmą galite pasiskaityti čia: https://cp-algorithms.com/graph/mst_kruskal_with_dsu.html
 */
 
@@ -59,7 +59,7 @@ void primo () {
 
 
 
-// Primo algoritmo implementacija, naudojanti priority_queue
+// Primo algoritmo realizacija, naudojanti priority_queue
 
 vector<pair<int, int>> adj[MAXN];
 /*
