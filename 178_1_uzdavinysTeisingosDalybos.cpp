@@ -4,7 +4,7 @@ const int MAXM = ...; // maksimali dėmens vertė
 int n;
 int A;
 int v[MAXN+1];
-int G[MAXN*MAXM+1][MAXN+1];
+bool G[MAXN*MAXM+1][MAXN+1];
 
 void destyk () {
     // išvalomos masyvo reikšmės
