@@ -32,7 +32,8 @@ bool maxIvertis (tPozicija pozicija) {
         return false; // nes paskutinį ėjimą atliko antrasis žaidėjas
     else {
         bool grazinamasIvertis = false;
-        for (bool suktiPirmyn = false; suktiPirmyn <= true; suktiPirmyn++) {
+        bool kryptys[] = {false, true};
+        for(bool suktiPirmyn : kryptys) { {
             atlikEjima(suktiPirmyn, pozicija);
             bool ivertis = minIvertis(pozicija);
             if (!grazinamasIvertis && ivertis) // jei grazinamasIvertis < ivertis
@@ -52,7 +53,8 @@ bool minIvertis (tPozicija pozicija) {
         return true; // nes paskutinį ėjimą atliko pirmasis žaidėjas
     else {
         bool grazinamasIvertis = true;
-        for (bool suktiPirmyn = false; suktiPirmyn <= true; suktiPirmyn++) {
+        bool kryptys[] = {false, true};
+        for(bool suktiPirmyn : kryptys) { {
             atlikEjima(suktiPirmyn, pozicija);
             bool ivertis = maxIvertis(pozicija);
             if (grazinamasIvertis && !ivertis) // jei grazinamasIvertis > ivertis
